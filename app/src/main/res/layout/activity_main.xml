@@ -1,18 +1,187 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- 상단 바 -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="내 냉장고"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"/>
+    </LinearLayout>
+
+    <!-- 채소 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="채소"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/btnAddVeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnVeg1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:layout_margin="4dp"/>
+        <Button
+            android:id="@+id/btnVeg2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:layout_margin="4dp"/>
+        <!-- 추가 버튼 -->
+    </GridLayout>
+
+    <!-- 육류 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="육류"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/btnAddMeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnMeat1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:layout_margin="4dp"/>
+        <Button
+            android:id="@+id/btnMeat2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:layout_margin="4dp"/>
+        <!-- 추가 버튼 -->
+    </GridLayout>
+
+    <!-- 유제품 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="유제품"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/btnAddDairy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnDairy1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:layout_margin="4dp"/>
+        <Button
+            android:id="@+id/btnDairy2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:layout_margin="4dp"/>
+        <!-- 추가 버튼 -->
+    </GridLayout>
+
+    <!-- 하단 네비게이션 바 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/btnNav1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="아이콘1"/>
+        <Button
+            android:id="@+id/btnNav2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="아이콘2"/>
+    </LinearLayout>
+</LinearLayout>
