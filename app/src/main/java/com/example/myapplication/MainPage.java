@@ -1,2 +1,4 @@
-package com.example.myapplication;public class MainPage {
+package com.example.myapplication;
+
+public class MainPage {
 }
