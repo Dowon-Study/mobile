@@ -7,7 +7,6 @@
         <option name="testRunner" value="GRADLE" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="$USER_HOME$/ProgramData/chocolatey/lib/gradle/tools/gradle-8.11" />
-        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
